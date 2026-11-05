@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Imagine ton porte-clés SKYCRAFT : choisis sa forme et sa couleur, ajoute ton texte et place tes motifs."
+    />
+    <meta name="theme-color" content="#f8f7f3" />
+    <title>Personnalise ton porte-clés — SKYCRAFT</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-skycraft.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html#top" class="brand" aria-label="Accueil SKYCRAFT">
+          <img class="brand-mark" src="images/logo-skycraft.jpeg" alt="" />
+          <span class="brand-name">SKYCRAFT</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html#collections">Nos produits</a>
+          <a href="index.html#commander">Commander</a>
+          <a href="personnaliser.html" aria-current="page">Personnaliser</a>
+          <a href="index.html#histoire">Notre histoire</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <a href="#personnalisation" class="btn btn-small">Créer mon modèle <span aria-hidden="true">↓</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="customize-hero">
+        <div class="container customize-heading">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> À toi de créer</p>
+          <h1>Imagine ton porte-clés <span>SKYCRAFT.</span></h1>
+          <p>Choisis sa forme et sa couleur, ajoute ton texte et tes motifs. Déplace les éléments sur l’aperçu, puis découvre le prix indicatif avant ta demande.</p>
+        </div>
+      </section>
+
+      <section class="customize-section" id="personnalisation">
+        <div class="container customize-grid">
+          <div class="custom-preview-panel">
+            <div class="preview-heading">
+              <p class="preview-kicker">TON ATELIER DE CRÉATION</p>
+              <span class="live-badge"><span aria-hidden="true"></span>Aperçu en direct</span>
+            </div>
+            <div class="custom-preview">
+              <canvas class="custom-keychain" id="keychain-canvas" width="600" height="460" aria-label="Aperçu interactif du porte-clés. Fais glisser pour dessiner ou choisis un motif à placer." role="img"></canvas>
+            </div>
+            <p class="preview-caption">Aperçu indicatif : le rendu final peut varier selon le modèle disponible.</p>
+          </div>
+
+          <aside class="customize-sidebar">
+            <div class="designer-controls" aria-label="Outils de personnalisation">
+              <details class="designer-step" open>
+                <summary>1. Forme et couleur</summary>
+                <div class="designer-step-content">
+              <span class="control-label">Forme du porte-clés</span>
+              <div class="shape-options" role="group" aria-label="Forme du porte-clés">
+                <button class="shape-option is-selected" type="button" data-shape="round" aria-pressed="true">
+                  <span aria-hidden="true">●</span> Rond
+                </button>
+                <button class="shape-option" type="button" data-shape="heart" aria-pressed="false">
+                  <span aria-hidden="true">♥</span> Cœur
+                </button>
+                <button class="shape-option" type="button" data-shape="star" aria-pressed="false">
+                  <span aria-hidden="true">★</span> Étoile
+                </button>
+                <button class="shape-option" type="button" data-shape="hexagon" aria-pressed="false">
+                  <span aria-hidden="true">⬡</span> Hexagone
+                </button>
+              </div>
+              <label for="custom-color">Couleur du porte-clés</label>
+              <select id="custom-color" name="color" form="customize-form" required>
+                <option value="vert">Vert</option>
+                <option value="bleu">Bleu</option>
+                <option value="rose">Rose</option>
+                <option value="jaune">Jaune</option>
+                <option value="violet">Violet</option>
+                <option value="orange">Orange</option>
+                <option value="noir">Noir</option>
+                <option value="blanc">Blanc</option>
+                <option value="custom">Personnalisée</option>
+              </select>
+              <label class="color-control" for="custom-color-picker">Ou choisis ta propre couleur
+                <input id="custom-color-picker" type="color" value="#4b8260" />
+              </label>
+              <span class="control-label">Finition de l’anneau</span>
+              <div class="ring-options" role="group" aria-label="Finition de l’anneau">
+                <button class="ring-option is-selected" type="button" data-ring-color="silver" aria-pressed="true">
+                  <span class="ring-swatch ring-swatch-silver" aria-hidden="true"></span> Argent
+                </button>
+                <button class="ring-option" type="button" data-ring-color="gold" aria-pressed="false">
+                  <span class="ring-swatch ring-swatch-gold" aria-hidden="true"></span> Doré
+                </button>
+                <button class="ring-option" type="button" data-ring-color="rose-gold" aria-pressed="false">
+                  <span class="ring-swatch ring-swatch-rose-gold" aria-hidden="true"></span> Or rose
+                </button>
+              </div>
+              <label for="keychain-rotation">Rotation gauche / droite <output id="rotation-value" for="keychain-rotation">0°</output></label>
+              <input id="keychain-rotation" type="range" min="0" max="360" step="5" value="0" />
+              <label for="keychain-tilt">Inclinaison haut / bas <output id="tilt-value" for="keychain-tilt">0°</output></label>
+              <input id="keychain-tilt" type="range" min="0" max="360" step="5" value="0" />
+                </div>
+              </details>
+
+              <details class="designer-step">
+                <summary>2. Texte</summary>
+                <div class="designer-step-content">
+                  <label for="custom-text">Ton texte <span>(12 caractères max.)</span></label>
+                  <input id="custom-text" name="customText" form="customize-form" type="text" maxlength="12" placeholder="Ex. ALEX" autocomplete="off" />
+                  <p class="custom-text-help">Déplace-le directement sur l’aperçu avec l’outil « Déplacer ».</p>
+                  <div class="text-design-options">
+                    <span class="control-label">Style du texte</span>
+                    <div class="designer-options">
+                      <label class="color-control" for="design-text-color">Couleur du texte
+                        <input id="design-text-color" type="color" value="#ffffff" />
+                      </label>
+                      <label for="design-font">Style d’écriture
+                        <select id="design-font">
+                          <option value="Manrope">Moderne</option>
+                          <option value="DM Sans">Classique</option>
+                          <option value="Georgia">Élégant</option>
+                        </select>
+                      </label>
+                      <label class="size-control" for="design-text-size">Taille du texte <output id="design-text-size-value">22</output>
+                        <input id="design-text-size" type="range" min="12" max="34" value="22" />
+                      </label>
+                      <label class="size-control" for="design-text-position">Position verticale <output id="design-text-position-value">17</output>
+                        <input id="design-text-position" type="range" min="-30" max="45" value="17" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details class="designer-step">
+                <summary>3. Motifs et dessin</summary>
+                <div class="designer-step-content">
+              <span class="control-label">Choisir un outil</span>
+              <div class="tool-buttons">
+                <button class="tool-button" type="button" data-tool="move" aria-pressed="false">↔ Déplacer</button>
+                <button class="tool-button" type="button" data-tool="rotate" aria-pressed="false">⟳ Tourner</button>
+                <button class="tool-button is-active" type="button" data-tool="draw" aria-pressed="true">✎ Dessiner</button>
+                <button class="tool-button" type="button" data-tool="star" aria-label="Choisir le tampon étoile" aria-pressed="false">✦ Étoile</button>
+                <button class="tool-button" type="button" data-tool="heart" aria-label="Choisir le tampon cœur" aria-pressed="false">♥ Cœur</button>
+                <button class="tool-button" type="button" data-tool="flower" aria-label="Choisir le tampon fleur" aria-pressed="false">✿ Fleur</button>
+                <button class="tool-button" type="button" data-tool="circle" aria-label="Choisir le tampon rond" aria-pressed="false">● Rond</button>
+                <button class="tool-button" type="button" data-tool="diamond" aria-label="Choisir le tampon losange" aria-pressed="false">◆ Losange</button>
+                <button class="tool-button" type="button" data-tool="smile" aria-label="Choisir le tampon sourire" aria-pressed="false">☺ Sourire</button>
+              </div>
+
+              <div class="designer-options">
+                <label class="color-control" for="drawing-color">Couleur du motif
+                  <input id="drawing-color" type="color" value="#17241f" />
+                </label>
+                <label class="size-control" for="drawing-size">Épaisseur du trait <output id="drawing-size-value">6</output>
+                  <input id="drawing-size" type="range" min="2" max="18" value="6" />
+                </label>
+                <label class="size-control" for="motif-size">Taille des motifs <output id="motif-size-value">24</output>
+                  <input id="motif-size" type="range" min="12" max="40" value="24" />
+                </label>
+              </div>
+
+              <div class="designer-palette">
+                <span class="control-label">Couleurs rapides</span>
+                <div class="palette-swatches" role="group" aria-label="Couleurs rapides pour les motifs">
+                  <button type="button" class="palette-swatch is-selected" data-color="#17241f" aria-label="Vert foncé" aria-pressed="true"></button>
+                  <button type="button" class="palette-swatch" data-color="#ffffff" aria-label="Blanc" aria-pressed="false"></button>
+                  <button type="button" class="palette-swatch" data-color="#e7b84b" aria-label="Jaune doré" aria-pressed="false"></button>
+                  <button type="button" class="palette-swatch" data-color="#e87575" aria-label="Corail" aria-pressed="false"></button>
+                  <button type="button" class="palette-swatch" data-color="#6f8fe8" aria-label="Bleu" aria-pressed="false"></button>
+                  <button type="button" class="palette-swatch" data-color="#aa79cb" aria-label="Violet" aria-pressed="false"></button>
+                </div>
+              </div>
+
+              <div class="designer-presets">
+                <span class="control-label">Démarrer avec un motif</span>
+                <div class="preset-buttons">
+                  <button class="tool-action" type="button" data-preset="stars">✨ Étoiles</button>
+                  <button class="tool-action" type="button" data-preset="heart">♥ Cœur</button>
+                  <button class="tool-action" type="button" data-preset="flower">✿ Fleur</button>
+                  <button class="tool-action" type="button" data-preset="smile">☺ Sourire</button>
+                </div>
+              </div>
+
+              <div class="image-design-options">
+                <span class="control-label">Ajouter ta propre image</span>
+                <p class="custom-text-help">PNG, JPG ou WebP, jusqu’à 512 Ko. Ton image reste sur cet appareil.</p>
+                <label class="tool-action image-upload-button" for="design-image-file">Choisir une image</label>
+                <input id="design-image-file" type="file" accept="image/png,image/jpeg,image/webp" hidden />
+                <label class="size-control" for="design-image-size">Taille de l’image <output id="design-image-size-value">84</output>
+                  <input id="design-image-size" type="range" min="36" max="140" value="84" />
+                </label>
+                <button class="tool-action" id="remove-design-image" type="button" disabled>Retirer l’image</button>
+                <p class="image-status" id="image-status" aria-live="polite">Choisis l’outil « Déplacer » pour déplacer l’image sur le porte-clés.</p>
+              </div>
+
+              <div class="designer-actions">
+                <button class="tool-action" id="undo-design" type="button" disabled>↶ Annuler</button>
+                <button class="tool-action" id="redo-design" type="button" disabled>↷ Rétablir</button>
+                <button class="tool-action" id="clear-design" type="button">Effacer motifs</button>
+                <button class="tool-action" id="reset-design" type="button">Réinitialiser</button>
+              </div>
+                </div>
+              </details>
+
+              <details class="designer-step">
+                <summary>4. Sauvegarder ou télécharger</summary>
+                <div class="designer-step-content">
+              <div class="designer-actions designer-file-actions">
+                <button class="tool-action" id="save-project" type="button">Enregistrer mon projet</button>
+                <button class="tool-action" id="load-project-button" type="button">Ouvrir un projet</button>
+                <input id="load-project" type="file" accept="application/json,.json" hidden />
+                <button class="btn btn-primary" id="download-design" type="button">Télécharger l’aperçu PNG <span aria-hidden="true">↓</span></button>
+              </div>
+              <a class="btn btn-primary designer-order-link" href="#customize-form">
+                Commander ce modèle <span aria-hidden="true">↓</span>
+              </a>
+                </div>
+              </details>
+              <p class="designer-status" id="designer-status" aria-live="polite">Ton brouillon est sauvegardé automatiquement sur cet appareil. Ctrl+Z annule, Ctrl+Y rétablit.</p>
+              <p class="tool-help" id="tool-help" aria-live="polite">Fais glisser ton doigt ou ta souris sur le porte-clés pour dessiner.</p>
+            </div>
+
+            <form class="customize-form" id="customize-form">
+            <p class="eyebrow">Dernière étape</p>
+            <h2>Commande ton modèle</h2>
+            <p class="custom-order-intro">Ton aperçu et tes choix seront ajoutés à la demande. Renseigne tes coordonnées pour préparer l’e-mail de commande.</p>
+
+            <label for="custom-quantity">Nombre de porte-clés</label>
+            <select id="custom-quantity" name="quantity" required>
+              <option value="1">1 porte-clés</option>
+              <option value="2">2 porte-clés</option>
+              <option value="3">3 porte-clés</option>
+              <option value="4">4 porte-clés</option>
+              <option value="5">5 porte-clés</option>
+              <option value="6">6 porte-clés</option>
+              <option value="7">7 porte-clés</option>
+              <option value="8">8 porte-clés</option>
+              <option value="9">9 porte-clés</option>
+              <option value="10">10 porte-clés</option>
+              <option value="11">11 porte-clés</option>
+              <option value="12">12 porte-clés</option>
+              <option value="13">13 porte-clés</option>
+              <option value="14">14 porte-clés</option>
+              <option value="15">15 porte-clés</option>
+            </select>
+            <section class="design-summary" aria-labelledby="design-summary-title">
+              <h3 id="design-summary-title">Récapitulatif de ta création</h3>
+              <p id="design-summary" aria-live="polite"></p>
+            </section>
+            <p class="custom-price-note" id="custom-price-note" aria-live="polite">Le prix indicatif sera calculé selon les lots. Le prix final de la personnalisation sera confirmé par e-mail.</p>
+
+            <label for="custom-name">Ton nom</label>
+            <input id="custom-name" name="name" type="text" autocomplete="name" placeholder="Prénom et nom" required />
+
+            <label for="custom-email">Ton adresse e-mail</label>
+            <input id="custom-email" name="email" type="email" autocomplete="email" placeholder="toi@exemple.fr" required />
+
+            <label for="custom-message">Autres détails <span>(facultatif)</span></label>
+            <textarea id="custom-message" name="message" rows="3" placeholder="Décris une autre idée ou pose-nous une question."></textarea>
+
+            <button type="submit" class="btn btn-primary">Commander mon porte-clés <span aria-hidden="true">↗</span></button>
+            <p class="customize-note" id="customize-note" aria-live="polite">
+              Ton aperçu PNG sera téléchargé automatiquement. Joins-le à l’e-mail qui s’ouvrira pour nous envoyer ta demande.
+            </p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="customize-back">
+        <div class="container">
+          <a class="text-link" href="index.html#collections">← Retour aux produits SKYCRAFT</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="index.html#top" class="brand" aria-label="Accueil SKYCRAFT">
+          <img class="brand-mark" src="images/logo-skycraft.jpeg" alt="" />
+          <span class="brand-name">SKYCRAFT</span>
+        </a>
+        <p>Des accessoires imaginés avec passion.</p>
+        <span>© <span id="year"></span> SKYCRAFT</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

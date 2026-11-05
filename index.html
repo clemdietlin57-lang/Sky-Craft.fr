@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Découvre les porte-clés SKYCRAFT et imagine un modèle personnalisé."
+    />
+    <meta name="theme-color" content="#f8f7f3" />
+    <title>SKYCRAFT — Des porte-clés qui te ressemblent</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-skycraft.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="Accueil SKYCRAFT">
+          <img class="brand-mark" src="images/logo-skycraft.jpeg" alt="" />
+          <span class="brand-name">SKYCRAFT</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="#collections">Nos modèles</a>
+          <a href="#histoire">Notre histoire</a>
+          <a href="personnaliser.html">Personnaliser</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#commander" class="btn btn-small">Commander <span aria-hidden="true">↓</span></a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> La petite touche qui change tout</p>
+            <h1>Un porte-clés <span>à ton image.</span></h1>
+            <p class="lead">
+              Découvre nos porte-clés et choisis ton préféré. Envie d’un modèle unique ?
+              Crée-le avec notre outil de personnalisation.
+            </p>
+            <div class="hero-actions">
+              <a href="#collections" class="btn btn-primary">Voir les modèles <span aria-hidden="true">↓</span></a>
+              <a href="personnaliser.html" class="btn btn-secondary">Créer le mien</a>
+            </div>
+            <p class="hero-note">Des idées originales, imaginées avec passion par SKYCRAFT.</p>
+          </div>
+          <div class="hero-art">
+            <img class="hero-brand-photo" src="images/porte-cles-artisanaux.jpg" alt="Porte-clés artisanaux colorés faits à la main" />
+          </div>
+        </div>
+      </section>
+
+      <section class="trustbar" aria-label="Les atouts SKYCRAFT">
+        <div class="container trust-grid">
+          <div>Des modèles originaux</div>
+          <div>De la couleur et du style</div>
+          <div>Personnalisation possible</div>
+          <div>Une petite marque passionnée</div>
+        </div>
+      </section>
+
+      <section class="products-section section" id="collections">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">La collection</p>
+            <h2>Choisis ton accessoire</h2>
+            <p>Des porte-clés et des colliers à offrir ou à garder pour soi.</p>
+          </div>
+          <div class="products-grid">
+            <article class="product-card">
+              <div class="product-art product-art-keychain">
+                <img src="images/porte-cles-artisanaux.jpg" alt="Porte-clés artisanaux colorés faits à la main" loading="lazy" />
+              </div>
+              <div class="product-info">
+                <p class="product-type">Le classique</p>
+                <h3>Porte-clés SKY</h3>
+                <p>Un modèle simple et sympa pour tes clés ou ton sac.</p>
+                <ul class="product-prices">
+                  <li>1 porte-clés <strong>3,50 €</strong></li>
+                  <li>2 porte-clés <strong>6 €</strong></li>
+                  <li>Lot de 5 porte-clés <strong>11 €</strong></li>
+                </ul>
+                <a class="product-link" href="#commander" data-product="Porte-clés">Commander <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-art product-art-necklace">
+                <img src="images/colliers-artisanaux.jpg" alt="Colliers faits main avec des pendentifs originaux" loading="lazy" />
+              </div>
+              <div class="product-info">
+                <p class="product-type">Le collier</p>
+                <h3>Collier SKY</h3>
+                <p>Un accessoire coloré pour compléter ton style.</p>
+                <ul class="product-prices">
+                  <li>1 collier <strong>5 €</strong></li>
+                  <li>2 colliers <strong>8 €</strong></li>
+                  <li>Lot de 5 colliers <strong>15 €</strong></li>
+                </ul>
+                <a class="product-link" href="#commander" data-product="Collier">Commander <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-art product-art-keychain product-art-custom">
+                <img src="images/exemple-personnalise.png" alt="Exemple de porte-clés personnalisé avec le prénom Alex" loading="lazy" />
+              </div>
+              <div class="product-info">
+                <p class="product-type">À personnaliser</p>
+                <h3>Ton modèle unique</h3>
+                <p>Choisis une couleur, ajoute ton texte et dessine ton motif.</p>
+                <ul class="product-prices">
+                  <li>Prix indicatif dès <strong>3,50 €</strong></li>
+                  <li>Personnalisation confirmée par e-mail</li>
+                </ul>
+                <a class="product-link" href="personnaliser.html">Créer mon modèle <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+          <div class="offers-grid" aria-label="Offres spéciales">
+            <article class="offer-card">
+              <span class="offer-label">Offre duo</span>
+              <p><strong>2 porte-clés + 2 colliers</strong><span>14 €</span></p>
+              <a class="product-link" href="#commander" data-product="Offre duo" data-quantity="1">Choisir l’offre <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="offer-card">
+              <span class="offer-label">Lots de 5</span>
+              <p><strong>5 porte-clés : 11 €</strong><span>5 colliers : 15 €</span></p>
+              <div class="offer-links">
+                <a class="product-link" href="#commander" data-product="Porte-clés" data-quantity="5">5 porte-clés <span aria-hidden="true">→</span></a>
+                <a class="product-link" href="#commander" data-product="Collier" data-quantity="5">5 colliers <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+          <p class="order-note">Les prix sont indicatifs. Les détails et la disponibilité seront confirmés par e-mail.</p>
+        </div>
+      </section>
+
+      <section class="order-section section" id="commander">
+        <div class="container order-grid">
+          <div class="order-intro">
+            <p class="eyebrow">Ça te plaît ?</p>
+            <h2>Fais ta demande de commande</h2>
+            <p>Renseigne les détails ci-dessous. Ton application e-mail s’ouvrira avec ta demande prête à envoyer.</p>
+            <p class="order-email">Une question ?<br /><a href="mailto:clem.diet57@gmail.com">Écris-nous</a></p>
+          </div>
+          <form class="order-form" id="order-form">
+            <div class="form-row">
+              <div>
+                <label for="order-product">Modèle</label>
+                <select id="order-product" name="product" required>
+                  <option value="Porte-clés">Porte-clés SKY</option>
+                  <option value="Collier">Collier SKY</option>
+                  <option value="Offre duo">Offre duo — 2 porte-clés + 2 colliers</option>
+                </select>
+              </div>
+              <div>
+                <label for="order-quantity">Quantité</label>
+                <select id="order-quantity" name="quantity" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                </select>
+              </div>
+            </div>
+            <p class="order-total" id="order-total" aria-live="polite"></p>
+            <label for="order-name">Ton nom</label>
+            <input id="order-name" name="name" type="text" autocomplete="name" placeholder="Prénom et nom" required />
+            <label for="order-email">Ton adresse e-mail</label>
+            <input id="order-email" name="email" type="email" autocomplete="email" placeholder="toi@exemple.fr" required />
+            <label for="order-message">Un détail à nous préciser ?</label>
+            <textarea id="order-message" name="message" rows="3" placeholder="Couleur, question, ou autre idée…"></textarea>
+            <button type="submit" class="btn btn-primary">Préparer ma demande <span aria-hidden="true">↗</span></button>
+            <p class="form-note" id="order-note" aria-live="polite">La demande n’est envoyée qu’après confirmation dans ton application e-mail.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="story-section section" id="histoire">
+        <div class="container story-inner">
+          <div>
+            <p class="eyebrow">Notre histoire</p>
+            <h2>Une idée, de la créativité et l’envie de créer</h2>
+          </div>
+          <p>
+            SKYCRAFT est une petite marque de porte-clés imaginée par des ados passionnés.
+            On aime inventer des modèles, tester des idées et donner à chacun la possibilité
+            d’ajouter sa touche personnelle.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container contact-inner">
+          <div>
+            <p class="eyebrow">On en parle ?</p>
+            <h2>Une question ou une idée ?</h2>
+            <p>Écris-nous, on sera ravis de découvrir ton projet.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-light" href="tel:+33681317917">Nous contacter <span aria-hidden="true">↗</span></a>
+            <a class="contact-email" href="tel:+33681317917">06 81 31 79 17</a>
+            <a class="contact-email" href="mailto:clem.diet57@gmail.com">clem.diet57@gmail.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="#top" class="brand" aria-label="Retour en haut — SKYCRAFT">
+          <img class="brand-mark" src="images/logo-skycraft.jpeg" alt="" />
+          <span class="brand-name">SKYCRAFT</span>
+        </a>
+        <p>Des porte-clés imaginés avec passion.</p>
+        <span>© <span id="year"></span> SKYCRAFT</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
